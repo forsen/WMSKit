@@ -1,5 +1,5 @@
 # WMSKit
-WMSKit is a kit to add WMS support to Swift 3 / iOS 10. 
+A kit to handle OGC's WMS (Web Map Service) services in Swift / iOS with MapKit
 
 ## Usage
 Add this line to your Podfile (replace the tag with current tag)
