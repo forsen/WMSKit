@@ -10,6 +10,7 @@
 		D3AEF7871E340C3000843EBC /* WMSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AEF77D1E340C3000843EBC /* WMSKit.framework */; };
 		D3AEF78C1E340C3100843EBC /* WMSKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AEF78B1E340C3100843EBC /* WMSKitTests.swift */; };
 		D3AEF78E1E340C3100843EBC /* WMSKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D3AEF7801E340C3000843EBC /* WMSKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3AEF7981E3411FD00843EBC /* WMSTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AEF7971E3411FD00843EBC /* WMSTileOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		D3AEF7861E340C3000843EBC /* WMSKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMSKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AEF78B1E340C3100843EBC /* WMSKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMSKitTests.swift; sourceTree = "<group>"; };
 		D3AEF78D1E340C3100843EBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3AEF7971E3411FD00843EBC /* WMSTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMSTileOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		D3AEF77F1E340C3000843EBC /* WMSKit */ = {
 			isa = PBXGroup;
 			children = (
+				D3AEF7971E3411FD00843EBC /* WMSTileOverlay.swift */,
 				D3AEF7801E340C3000843EBC /* WMSKit.h */,
 				D3AEF7811E340C3000843EBC /* Info.plist */,
 			);
@@ -149,6 +152,7 @@
 					D3AEF77C1E340C3000843EBC = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7EW74P6JJK;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					D3AEF7851E340C3000843EBC = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AEF7981E3411FD00843EBC /* WMSTileOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		D3AEF7921E340C3100843EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7EW74P6JJK;
@@ -334,6 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.forsen.WMSKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +348,7 @@
 		D3AEF7931E340C3100843EBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7EW74P6JJK;
@@ -360,6 +368,7 @@
 		D3AEF7951E340C3100843EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7EW74P6JJK;
 				INFOPLIST_FILE = WMSKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +381,7 @@
 		D3AEF7961E340C3100843EBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7EW74P6JJK;
 				INFOPLIST_FILE = WMSKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
