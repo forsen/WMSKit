@@ -5,10 +5,8 @@
 //  Created by Erik Haider Forsen on 20/01/2017.
 //  Copyright © 2017 Erik Haider Forsen. All rights reserved.
 //
-
 import Foundation
 import MapKit
-
 
 extension String {
 
@@ -21,6 +19,24 @@ extension String {
 }
 
 
+/**
+ WMSTileOverlay is a subclass of MKTileOverlay. It overrides the public functions
+ `url(forTilePath path: path) -> URL` and
+ `loadTile(at path: MKTileOverlayPath, result: @escaping (Data?, Error?) -> Void)`
+
+ Downloaded tiles is cached, and cached tiles is used if they exists.
+ Usage
+ ----
+     let overlay = WMSTileOverlay(urlArg: "https://myWmsService/enedpoint?request=GetMap?layers=..." useMercator: true, wmsVersion: "1.3.0")
+     mapView.add(overlay)
+ Links
+ ----
+ [Source](https://github.com/forsen/WMSKit/) – The source code is available at GitHub
+
+ [CocoaPods](https://cocoapods.org/pods/WMSKit) – The podspec is hosted at CocoaPods
+
+ [Demo project](https://github.com/forsen/WMSKitDemo/) – A demo project hostet at GitHub which demonstrates how to use this WMSKit
+ */
 public class WMSTileOverlay : MKTileOverlay {
 
     let TILE_CACHE = "TILE_CACHE"
@@ -30,6 +46,18 @@ public class WMSTileOverlay : MKTileOverlay {
     let wmsVersion: String
     var alpha: CGFloat = 1.0
 
+    /**
+     Initializes a WMSTileOverlay. Supported WMS version is 1.1.1 and 1.3.0
+
+     urlArg should look something like this:
+
+         https://yourWmsService.com/wms?request=GetMap&service=WMS&styles=default&layers=layer&version=1.3.0&CRS=EPSG:4326&width=256&height=256&format=image/png
+
+      - parameter urlArg: A string representation of URL to WMS Service
+      - parameter useMercator: True if mercator is to be used
+      - parameter wmsVersion: Which wmsVersion is used
+      - returns: An overlay to be used with MapKit
+     */
     public init(urlArg: String, useMercator: Bool, wmsVersion: String) {
         self.url = urlArg
         self.useMercator = useMercator
