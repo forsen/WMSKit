@@ -1,11 +1,17 @@
 # WMSKit
-A kit to handle OGC's WMS (Web Map Service) services in Swift / iOS with MapKit
+WMSKit is a Framework for iOS written in Swift. It provides WMS (Web Map Service) capability by subclassing MapKit's `MKTileOverlay`
 
 ## Usage
-Add this line to your Podfile (replace the tag with current tag)
+Easiest method is to use CocoaPods. Just add this line to your Podfile (replace the tag with current tag)
 ```
-pod 'WMSKit', :git => 'https://github.com/forsen/WMSKit.git', :tag => '1.0.1'
+pod 'WMSKit'
 ```
+And then run this command in a terminal
+```
+$ pod install
+```
+
+Alternatively you can clone this repository and build the framework with XCode, and then add it to your project manually.
 
 When installed you can use it as follows:
 ```Swift
